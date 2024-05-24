@@ -1,99 +1,117 @@
 const inquirer = require("inquirer");
-const prompt = require("./config/prompts");
+const prompts = require("./config/prompts");
 const connection = require("./config/connection");
-const { addRolePrompt } = require("./config/prompts");
+const models = require("./models");
 
 
-console.log('Welcome to Your Employee Tracking System');
-promptUser();
+// console.log('Welcome to Your Employee Tracking System');
 
 // Main Menu
+const departments = [
+    { name: 'Engineering', value: 'Engineering' },
+    { name: 'Finance', value: 'Finance' },
+    { name: 'Interconnected', value: 'Interconnected' },
+    { name: 'Sales', value: 'Sales' },
+    { name: 'Legal', value: 'Legal' }
+];
 
-// Prompt User for Choices
 const promptUser = () => {
     inquirer
-        .prompt([
-            {
-                name: "choices",
-                type: "list",
-                message: "Please select an option:",
-                choices: [
-                    "View All Employees",
-                    "View All Roles",
-                    "View All Departments",
-                    "View All Employees By Department",
-                    "View Department Budgets",
-                    "Update Employee Role",
-                    "Update Employee Manager",
-                    "Add Employee",
-                    "Add Role",
-                    "Add Department",
-                    "Remove Employee",
-                    "Remove Role",
-                    "Remove Department",
-                    "Exit",
-                ],
-            },
-        ])
-        .then((answers) => {
-            const { choices } = answers;
+    .prompt = {
+        type: "list",
+        name: "department",
+        message: "Which department would you like to view?",
+        choices: departments
 
-            if (choices === "View All Employees") {
-                viewAllEmployees();
-            }
+    };
+    }
+    // const promptUser = () => {
+    //     inquirer
+    //         .prompt([
+    //             prompts.mainMenuPrompt
+    // {
+    //     name: "results",
+    //     type: "list",
+    //     message: "Please select an option:",
+    //     results: [
+    //         "View All Employees",
+    //         "View All Roles",
+    //         "View All Departments",
+    //         "View All Employees By Department",
+    //         "View Department Budgets",
+    //         "Update Employee Role",
+    //         "Update Employee Manager",
+    //         "Add Employee",
+    //         "Add Role",
+    //         "Add Department",
+    //         "Remove Employee",
+    //         "Remove Role",
+    //         "Remove Department",
+    //         "Exit",
+    //     ],
+    // },
 
-            if (choices === "View All Departments") {
-                viewAllDepartments();
-            }
+    ((results) => {
+        console.log(results);
+        // const { results } = results;
 
-            if (choices === "View All Employees By Department") {
-                viewEmployeesByDepartment();
-            }
+        if (results.menu === "View All Employees") {
+            models.viewAllEmployees();
+        }
 
-            if (choices === "Add Employee") {
-                addEmployee();
-            }
+        if (results.menu === "View All Departments") {
+            models.viewAllDepartments();
+        }
 
-            if (choices === "Remove Employee") {
-                removeEmployee();
-            }
+        if (results.menu === "View All Employees By Department") {
+            models.viewEmployeesByDepartment();
+        }
 
-            if (choices === "Update Employee Role") {
-                updateEmployeeRole();
-            }
+        if (results.menu === "Add Employee") {
+            models.addEmployee();
+        }
 
-            if (choices === "Update Employee Manager") {
-                updateEmployeeManager();
-            }
+        if (results.menu === "Remove Employee") {
+            models.removeEmployee();
+        }
 
-            if (choices === "View All Roles") {
-                viewAllRoles();
-            }
+        if (results.menu === "Update Employee Role") {
+            models.updateEmployeeRole();
+        }
 
-            if (choices === "Add Role") {
-                addRole();
-            }
+        if (results.menu === "Update Employee Manager") {
+            models.updateEmployeeManager();
+        }
 
-            if (choices === "Remove Role") {
-                removeRole();
-            }
+        if (results.menu === "View All Roles") {
+            models.viewAllRoles();
+        }
 
-            if (choices === "Add Department") {
-                addDepartment();
-            }
+        if (results.menu === "Add Role") {
+            models.addRole();
+        }
 
-            if (choices === "View Department Budgets") {
-                viewDepartmentBudget();
-            }
+        if (results.menu === "Remove Role") {
+            models.removeRole();
+        }
 
-            if (choices === "Remove Department") {
-                removeDepartment();
-            }
+        if (results.menu === "Add Department") {
+            models.addDepartment();
+        }
 
-            if (choices === "Exit") {
-                connection.end();
-            }
-        });
-};
+        if (results.menu === "View Department Budgets") {
+            models.viewDepartmentBudget();
+        }
 
-module.exports = server;
+        if (results.menu === "Remove Department") {
+            models.removeDepartment();
+        }
+
+        if (results.menu === "Exit") {
+            connection.end();
+        }
+    });
+
+
+    promptUser();
+// module.exports = server;
