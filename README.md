@@ -1,7 +1,7 @@
 # L-Lainio-employeeTrackerSQL
 Week-12 Challenge (SQL)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![](https://img.shields.io/badge/Lora-Lainio-4baaaa.svg)]
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![](https://img.shields.io/badge/Lora-Lainio-4baaaa.svg)
 
 ## Table of Contents
 
