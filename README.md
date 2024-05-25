@@ -10,6 +10,7 @@ Week-12 Challenge (SQL)
  * [Live-Screen-Recording-of-Application-Functionality](#live-screen-recording-of-application-functionality)
 
  * [Screenshots](#screenshots)
+ ![](https://share.zight.com/BluvQZ4w)
 
  * [Technologies-Used](#technologies-used)
 
