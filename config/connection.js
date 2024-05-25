@@ -1,7 +1,8 @@
-// const { Pool } = require("pg");
+const { Pool } = require("pg");
 const Sequelize = require("sequelize");
 
-require("dotenv").config();
+const dotenv = require('dotenv');
+dotenv.config();
 console.log (process.env);
 
 const connection = new Sequelize({
