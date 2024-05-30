@@ -1,7 +1,7 @@
 // Model for structuring role table
 
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const sequelize = require("../db/connection.js");
 
 class Role extends Model {
     constructor(title, salary, departmentId) {

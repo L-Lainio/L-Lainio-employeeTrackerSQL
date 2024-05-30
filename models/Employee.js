@@ -1,6 +1,6 @@
 // Constructor for employee
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const sequelize = require("../db/connection.js");
 
 class Employee extends Model {
 

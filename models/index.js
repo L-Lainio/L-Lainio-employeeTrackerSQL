@@ -2,7 +2,7 @@ const Department = require("./Department");
 const Role = require("./Role");
 const Employee = require("./Employee");
 const inquirer = require("inquirer");
-const prompts = require("../config/prompts");
+const prompts = require("../db/prompts");
 
 function viewAllEmployees() {
     inquirer.prompt([prompts.viewEmployeesPrompt]).then((answers) => {

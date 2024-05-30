@@ -1,5 +1,5 @@
 const { Pool } = require('pg');
-const { host, user, database, password, port } = require('./config');
+const { host, user, database, password, port } = require('./db');
 
 // Create a pool instance and pass in our config, which we set in our env vars
 const pool = new Pool({

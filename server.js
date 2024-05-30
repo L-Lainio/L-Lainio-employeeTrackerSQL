@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
-const prompts = require("./config/prompts");
-const connection = require("./config/connection");
+const prompts = require("./db/prompts");
+const connection = require("./db/connection");
 const models = require("./models");
 
 

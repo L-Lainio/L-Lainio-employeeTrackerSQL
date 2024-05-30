@@ -1,4 +1,4 @@
-USE employee_db;
+\c employee_db;
 INSERT INTO department (name)
 VALUES  ('Engineering'),
         ('Finance'),
@@ -21,15 +21,14 @@ VALUES  ('Engineering Manager', 120000, 1),
         ('Lawyer', 95000, 5);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES  ('Roxy', 'Say',  1, NULL),
-        ('Jane', 'Doe',  2, 1),
-        ('Janet', 'Doe',  3, 1),
-        ('Jennifer', 'Doe',  4, NULL),
-        ('Julia', 'Doe',  5, 4),
-        ('Jaya', 'Dave',  6, NULL),
-        ('Janki', 'Dave',  7, 6),
-        ('Juhi', 'Dave',  8, 6),
-        ('Jin', 'Dai',  9, NULL),
-        ('Jooeun', 'Dai',  10, 9),
-        ('Jocelyn', 'Davalos',  11, NULL),
-        ('Jaylia', 'Davalos',  12, 11);
+VALUES
+        ('Tom', 'Brady', 1, 1),
+        ('Thomas', 'The Tank Engine', 2, 2),
+        ('Thomas', 'Calle', 3, 3),
+        ('Thomas', 'Shelby', 4, 4),
+        ('Thomas', 'Hobbes', 5, 5),
+        ('Tom', 'Hanks', 6, 6),
+        ('Tom', 'Holland', 7, 7),
+        ('Tom', 'Ford', 8, 8),
+        ('Thomas', 'The Apostle', 9, 9),
+        ('Tom', 'Cruise', 10, 10);
